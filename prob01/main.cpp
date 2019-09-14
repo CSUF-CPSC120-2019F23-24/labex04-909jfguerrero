@@ -8,7 +8,7 @@ int main()
   // then print both the char and the short
 
   char my_char1 = 'J';
-  short my_short1 = ;
+  short my_short1 = 74;
   std::cout << "The ASCII value for " << my_char1 << " is " << my_short1 << std::endl;
 
   std::cout << std::endl; // blank line to separate output from the different exercises
@@ -16,7 +16,7 @@ int main()
   // TODO#2: add one to the character to see what gets printed out
 
   char my_char2 = 'C';
-  my_char2 = ;
+  my_char2 = my_char2 + 1;
   std::cout << "Char1: " << my_char2 << std::endl;
 
   std::cout << std::endl; // blank line to separate output from the different exercises
@@ -26,7 +26,8 @@ int main()
   // longer alphabetic
 
   char my_char3 = 'z';
-  my_char3 = ;
+  my_char3 = my_char3 + 1;
+  // numbers over 90 but less than 97 are no longer alphabetic but have symbols
   std::cout << "Char2: " << my_char3 << std::endl;
 
   std::cout << std::endl; // blank line to separate output from the different exercises
@@ -40,15 +41,18 @@ int main()
   short my_short2 = 32767; // maximum value for a short
   int my_int2 = my_short2;
 
+//after adding 1 to my_char2 it becomes negative because 32767 is the highest number
+
   std::cout << "Short (" << sizeof(my_short2) << " bytes): "
     << std::dec << my_short2 << std::hex << " (0x" << my_short2 << ')';
-  my_short2 = ;
+  my_short2 = my_short2 + 1;
   std::cout << ", after adding 1: " << std::dec << my_short2
     << std::hex << " (0x" << my_short2 << ")\n";
 
+//after adding 1 to my_int2 it doesn't become ngative because a maximum value is bigger
   std::cout << "Int (" << sizeof(my_short2) << " bytes): "
-    << std::dec << my_int2 << std::hex << " (0x" << my_int2 << ')';
-  my_int2 = ;
+    << std::dec << my_int2 << std::hex << " (0xclang++ -std=c++17 main.cpp -o main" << my_int2 << ')';
+  my_int2 = my_int2 + 1;
   std::cout << ", after adding 1: " << std::dec << my_int2
     << std::hex << " (0x" << my_int2 << ")\n";
 
@@ -60,16 +64,18 @@ int main()
 
   unsigned short my_short3 = 65535; // maximum value for an unsigned short
   int my_int3 = my_short3;
-
+//after adding 1 to my_int2 it doesn't become ngative because a maximum value isn't set
+  //my my_short3 becomes negative because maxium value of Short
   std::cout << "Unsigned short (" << sizeof(my_short3) << " bytes): "
     << std::dec << my_short3 << std::hex << " (0x" << my_short3 << ')';
-  my_short3 = ;
+  my_short3 = my_short3 + 1;
   std::cout << ", after adding 1: " << std::dec << my_short3
     << std::hex << " (0x" << my_short3 << ")\n";
 
+    //my int_3 doesn't become ngative because int mexium value is bigger than 65536
   std::cout << "Same value as int (" << sizeof(my_int3) << " bytes): "
     << std::dec << my_int3 << std::hex << " (0x" << my_int3 << ')';
-  my_int3 = ;
+  my_int3 = my_int3 + 1;
   std::cout << ", after adding 1: " << std::dec << my_int3
     << std::hex << " (0x" << my_int3 << ")\n";
 
